@@ -6,7 +6,7 @@ class Shipment < ApplicationRecord
         self[:dispatcher_info] = {
         dispatcher: "#{self.carrier.dispatchers[dispatcher_id].dispatcher_name}",
         email: "#{self.carrier.dispatchers[dispatcher_id].email}",
-        phone_dispatcher_id: "#{self.carrier.dispatchers[dispatcher_id].dispatcher_phone_number}"
+        dispatcher_phone_number: "#{self.carrier.dispatchers[dispatcher_id].dispatcher_phone_number}"
     }
     end
 end
